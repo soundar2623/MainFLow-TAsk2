@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Navigation Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background: #2990c4;
+            padding: 10px 0;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        ul li {
+            position: relative;
+            margin: 0 20px;
+        }
+
+        ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        ul li a:hover {
+            background: hsl(27, 100%, 54%);
+            border-radius: 8px;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #31424a;
+            min-width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(1.0, 1.0, 1.0, 01.1);
+        }
+
+        .dropdown li {
+            display: block;
+        }
+
+        .dropdown li a {
+            padding: 10px;
+            display: block;
+            color: white;
+        }
+
+        .dropdown li a:hover {
+            background:hsl(27, 100%, 54%);;
+            
+        }
+
+        ul li:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <h1></h1>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+                <a href="#">Services</a>
+                <ul class="dropdown">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">SEO Services</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">AI and ML</a></li>
+                    <li><a href="#">Data Science</a></li>
+                    <li><a href="#">Web Development</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
